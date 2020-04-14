@@ -15,7 +15,7 @@
     "key",
     "complex"
   ],
-  "author": "",
+  "author": "S.GABORIEAU <https://github.com/Orivoir>",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",
