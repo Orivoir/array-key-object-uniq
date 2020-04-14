@@ -10,8 +10,6 @@
 
     - [usage](#inline-array-usage)
 
-- [more informations](#more-informations)
-
 ## installation
 
 - npm install array-key-object-uniq --save
