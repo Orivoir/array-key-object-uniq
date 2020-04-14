@@ -1,0 +1,148 @@
+{
+    "RangeError": [
+
+        {
+            "arg1": [
+                {} ,
+                {}
+            ] ,
+            "isThrow": false
+        } ,
+        {
+            "arg1": [
+                {
+                    "abc": "def"
+                } ,
+                {
+                    "foo": "bar"
+                } ,
+                null ,
+                false,
+                25
+            ] ,
+            "isThrow": true
+        } ,
+        {
+            "arg1": [
+                {
+                    "abc": "def",
+                    "def": null,
+                    "foo": false
+                } ,
+                {
+                    "foo": "bar"
+                } ,
+                null ,
+                false,
+                25
+            ] ,
+            "isThrow": true
+        } ,
+        {
+            "arg1": [
+                {
+                    "abc": "def",
+                    "def": null,
+                    "foo": false
+                } ,
+                {
+                    "foo": "bar"
+                } ,
+                {
+                    "bar": "bar-1" ,
+                    "foo": "bar-2" ,
+                    "nope": [ "bar-1", "bar-2" ]
+                }
+            ] ,
+            "isThrow": true
+        }
+    ] ,
+
+    "attemps": [
+        {
+            "entry": [
+                {
+                    "name": "foo_index",
+                    "controller": "Foo.index",
+                    "path": "/foo/"
+                } , {
+                    "name": "foo_bar",
+                    "controller": "Foo.bar",
+                    "path": "/foo/bar"
+                } , {
+                    "name": "foo_contact",
+                    "controller": "Foo.contact",
+                    "path": "/foo/contact"
+                }
+            ] ,
+
+            "output": [
+                "foo_index",
+                "Foo.index",
+                "/foo/",
+                "foo_bar",
+                "Foo.bar",
+                "/foo/bar",
+                "foo_contact",
+                "Foo.contact",
+                "/foo/contact"
+            ]
+        } , {
+
+            "entry": [
+                {
+                    "name": "foo_index",
+                    "controller": "Foo.index",
+                    "path": "/foo/"
+                } , {
+                    "name": "foo_index",
+                    "controller": "Foo.bar",
+                    "path": "/foo/bar"
+                } , {
+                    "name": "foo_contact",
+                    "controller": "Foo.contact",
+                    "path": "/foo/contact"
+                }
+            ] ,
+
+            "output": [
+                "foo_index",
+                "Foo.index",
+                "/foo/",
+                "Foo.bar",
+                "/foo/bar",
+                "foo_contact",
+                "Foo.contact",
+                "/foo/contact"
+            ]
+        } , {
+
+            "entry": [
+                {
+                    "name": "foo_index",
+                    "controller": "Foo.index",
+                    "path": "/foo/"
+                } , {
+                    "name": "foo_bar",
+                    "controller": "Foo.bar",
+                    "path": "/foo/"
+                } , {
+                    "name": "foo_contact",
+                    "controller": "Foo.contact",
+                    "path": "/foo/contact"
+                }
+            ] ,
+
+            "output": [
+                "foo_index",
+                "Foo.index",
+                "/foo/",
+                "foo_bar",
+                "Foo.bar",
+                "foo_contact",
+                "Foo.contact",
+                "/foo/contact"
+            ]
+        }
+    ]
+}

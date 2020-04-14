@@ -1,0 +1,39 @@
+{
+    "attempts": [
+        {
+            "input": [
+                {
+                    "stuff": "foo",
+                    "stuff0": "bar",
+                    "stuff1": true
+                } , {
+                    "stuff": 42,
+                    "stuff0": "hello",
+                    "stuff1": false
+                }
+            ] ,
+
+            "output": [
+                "foo", "bar", true, 42, "hello", false
+            ]
+        },
+        {
+            "input": [
+                {
+                    "stuff": true,
+                    "stuff0": null
+                } , {
+                    "stuff0": "hello - world"
+                } , {
+                    "foo": true
+                } , {
+                    "bar": "bar  "
+                }
+            ] ,
+
+            "output": [
+                true, null, "hello - world", true, "bar  "
+            ]
+        }
+    ]
+}
